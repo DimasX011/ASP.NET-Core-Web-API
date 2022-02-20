@@ -33,7 +33,7 @@ namespace weatherL1.Controllers
 
 
         [HttpPost("save")]
-        public IActionResult Create([FromQuery] int tempF, string date)
+        public IActionResult Create([FromQuery] int tempF, DateTime date)
         {
             weather.Add(tempF, date);
             return Ok();
@@ -46,7 +46,7 @@ namespace weatherL1.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult Update([FromQuery] int newtemp, [FromQuery] string newdateTime, [FromQuery] int temp, [FromQuery] string dateTime)
+        public IActionResult Update([FromQuery] int newtemp, [FromQuery] DateTime newdateTime, [FromQuery] int temp, [FromQuery] DateTime dateTime)
         {
             for (int i = 0; i < weather.weathers.Count; i++)
             {
@@ -60,7 +60,7 @@ namespace weatherL1.Controllers
         }
 
         [HttpDelete("delete")]
-        public IActionResult Delete([FromQuery] int tempdel, [FromQuery] string dateTime)
+        public IActionResult Delete([FromQuery] int tempdel, [FromQuery] DateTime dateTime)
         {
             for (int i = 0; i < weather.weathers.Count; i++)
             {

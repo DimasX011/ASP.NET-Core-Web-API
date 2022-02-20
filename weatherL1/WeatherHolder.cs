@@ -73,14 +73,14 @@ namespace weatherL1
             var rng = new Random();
             weathers = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
-                Date = "",
+                Date = DateTime.Now,
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToList();
         }
 
-        public void Add(int temp, string date)
+        public void Add(int temp, DateTime date)
         {
 
             var weather = new WeatherForecast
