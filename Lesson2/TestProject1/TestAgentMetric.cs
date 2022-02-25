@@ -28,8 +28,9 @@ namespace TestProject1
             //Arrange
             var fromTime = TimeSpan.FromSeconds(0);
             var toTime = TimeSpan.FromSeconds(100);
+            double value = 3 / 10;
             //Act
-            var result = controller.GetMetricsFromAgent(fromTime, toTime);
+            var result = controller.GetMetricsFromAgent(fromTime, toTime, value);
             // Assert
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
@@ -48,10 +49,8 @@ namespace TestProject1
         public void GetMetricsFromHddMetrics_ReturnsOk()
         {
             //Arrange
-            var fromTime = TimeSpan.FromSeconds(0);
-            var toTime = TimeSpan.FromSeconds(100);
             //Act
-            var hddcontroller = HddMetricsController.GetMetricsFromAgent(fromTime, toTime);
+            var hddcontroller = HddMetricsController.GetMetricsFromAgent();
             // Assert
             _ = Assert.IsAssignableFrom<IActionResult>(hddcontroller);
         }
@@ -70,10 +69,8 @@ namespace TestProject1
         public void GetMetricsFromRamMetrics_ReturnsOk()
         {
             //Arrange
-            var fromTime = TimeSpan.FromSeconds(0);
-            var toTime = TimeSpan.FromSeconds(100);
             //Act
-            var RamMetricsres = NetworkMetricsController.GetMetricsFromAgent(fromTime, toTime);
+            var RamMetricsres = RamMetricsController.GetMetricsFromAgent();
             // Assert
             _ = Assert.IsAssignableFrom<IActionResult>(RamMetricsres);
 
