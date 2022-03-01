@@ -1,0 +1,81 @@
+
+using AutoMapper;
+using Core;
+using MetricsAgent.AgentMetricRepo;
+using MetricsAgent.CpuMetricRepo;
+using MetricsAgent.DotnetMetricRepo;
+using MetricsAgent.HddMetricRepo;
+using MetricsAgent.NetworkMetricRepo;
+using MetricsAgent.RamMetricRepo;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Data.SQLite;
+
+namespace MetricsAgent
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        public IConfiguration Configuration { get; }
+        public void ConfigureServices(IServiceCollection services)
+        {
+            var mapperConfiguration = new MapperConfiguration(mp => mp.AddProfile(new MapperProfile()));
+            var mapper = mapperConfiguration.CreateMapper();
+            services.AddTransient<INotifier, Notifier1>();
+            services.AddTransient<NotifierMediatorService, NotifierMediatorService>();
+            services.AddSingleton(mapper);
+            services.AddControllers();
+            ConfigureSqlLiteConnection(services);
+            services.AddScoped<ICpuInterfaceRepository, CpuMetricRepository > ();
+            services.AddScoped<IAgentIterfaceRepository, AgentMetricRepository>();
+            services.AddScoped<IDotnetInterfaceRepository, DotnetMetricRepository>();
+            services.AddScoped<IhddMetricInterface, HddMetricRepository>();
+            services.AddScoped<INetworkMetricRepoitory, NetworkMetricRepository>();
+            services.AddScoped<IRamMetricRepository, RamMetricRepository>();
+        }
+
+        private void ConfigureSqlLiteConnection(IServiceCollection services)
+        {
+            const string connectionString = "Data Source=metrics.db;Version=3;Pooling=true;Max Pool Size=100;";
+            var connection = new SQLiteConnection(connectionString);
+            connection.Open();
+            PrepareSchema(connection);
+        }
+
+        private void PrepareSchema(SQLiteConnection connection)
+        {
+            using (var command = new SQLiteCommand(connection))
+            {
+                command.CommandText = "DROP TABLE IF EXISTS cpumetrics";
+                command.ExecuteNonQuery();
+                command.CommandText = @"CREATE TABLE cpumetrics(id INTEGER PRIMARY KEY,
+                    value INT, time INT)";
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
+
+    }
+}
