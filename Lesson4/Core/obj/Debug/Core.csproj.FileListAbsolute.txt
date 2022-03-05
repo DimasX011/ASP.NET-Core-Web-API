@@ -1,0 +1,10 @@
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\bin\Debug\Core.dll
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\bin\Debug\Core.pdb
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\bin\Debug\Microsoft.Analytics.Types.dll
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\obj\Debug\Core.dll
+C:\Users\Dimon\source\repos\ASP.NET-Core-Web-API\Lesson4\Core\obj\Debug\Core.pdb
