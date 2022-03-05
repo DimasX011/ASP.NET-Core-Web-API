@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LdQvjbCbJoX4s5h8HTUsP5znUs4JBZf7cHOUWMwy4Uj99YA8XMwzh8SqMKyyvboDf5GxGbBYtL5ZKpKbNL1+gw==",
+  "dgSpecHash": "CROS9cLpcXHaxLsS1TowG1jpDqVWk9bo5sxM2uthFslQNqntv1xYjdK7nN4yxn4tzoCjbt+7DRW3dknMBu59Jg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dimon\\source\\repos\\ASP.NET-Core-Web-API\\Lesson4\\MetricsAgent\\MetricsAgent.csproj",
   "expectedPackageFiles": [
@@ -91,11 +91,7 @@
     "C:\\Users\\Dimon\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Dimon\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Dimon\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Dimon\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Dimon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
-    "C:\\Users\\Dimon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Dimon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Dimon\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\Dimon\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
