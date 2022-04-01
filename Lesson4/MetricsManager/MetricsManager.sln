@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetricsManager", "MetricsManager.csproj", "{0ED3250D-6CCE-4A7D-B8DD-EB585A87D860}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetricsAgent", "..\MetricsAgent\MetricsAgent.csproj", "{FAF0AFC3-77A0-4562-A36D-EF1F3EBC1126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj", "{F0AACBDB-0732-48DB-996E-C07D1F04F5F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED3250D-6CCE-4A7D-B8DD-EB585A87D860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED3250D-6CCE-4A7D-B8DD-EB585A87D860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED3250D-6CCE-4A7D-B8DD-EB585A87D860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED3250D-6CCE-4A7D-B8DD-EB585A87D860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF0AFC3-77A0-4562-A36D-EF1F3EBC1126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF0AFC3-77A0-4562-A36D-EF1F3EBC1126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF0AFC3-77A0-4562-A36D-EF1F3EBC1126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF0AFC3-77A0-4562-A36D-EF1F3EBC1126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0AACBDB-0732-48DB-996E-C07D1F04F5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0AACBDB-0732-48DB-996E-C07D1F04F5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0AACBDB-0732-48DB-996E-C07D1F04F5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0AACBDB-0732-48DB-996E-C07D1F04F5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E35D062-7C3A-4CF7-98AC-DC3C1C652313}
+	EndGlobalSection
+EndGlobal
